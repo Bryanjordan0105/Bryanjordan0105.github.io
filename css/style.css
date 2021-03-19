@@ -285,6 +285,10 @@ input {
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+
+  h1 {
+    text-shadow: 2px 2px black;
+  }
   /* Slideshow compatability */
   .slide-1 {
     background-image: url(/images/Apple.png);
