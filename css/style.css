@@ -17,51 +17,6 @@ html {
   color: #666;
 }
 
-nav {
-  font-family: "Redressed", cursive;
-  font-size: 16px;
-}
-nav.nav-a ol li {
-  display: inline-block;
-}
-
-nav.nav-a ol {
-  display: flex;
-  justify-content: flex-end;
-  justify-content: space-around;
-  margin-left: 70%;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-a:hover {
-  color: rgb(12, 117, 112);
-}
-
-/* Nav */
-
-h1.name {
-  font-family: "Redressed", cursive;
-  text-align: center;
-  color: white;
-  font-size: 70px;
-}
-
-.cover_letter {
-  text-align: center;
-  color: white;
-  font-family: "Redressed", cursive;
-  font-size: 25px;
-}
-
-h2 {
-  font-family: "Redressed", cursive;
-  color: white;
-}
-/* Skills */
 .anchor {
   display: block;
   height: 400px; /*same height as header*/
@@ -69,11 +24,8 @@ h2 {
   visibility: hidden;
 }
 
-ol.skills {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
+/* Images */
+
 .pimg1,
 .pimg2,
 .pimg3,
@@ -87,18 +39,14 @@ ol.skills {
 
 .pimg1 {
   background-image: url("https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
-  min-height: 100%;
+  min-height: 117vh;
 }
 .pimg2 {
   background-image: url("https://images.unsplash.com/photo-1468971050039-be99497410af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80");
-  min-height: 500px;
+  min-height: 600px;
   background-color: #4a69bd;
 }
 .pimg3 {
-  background-image: url("https://images.unsplash.com/photo-1581891774905-a620d9ef73e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
-  min-height: 500px;
-}
-.pimg4 {
   background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80");
   min-height: 500px;
 }
@@ -109,23 +57,104 @@ ol.skills {
   color: #ddd;
   background-color: #4a69bd;
 }
-/* projects */
-img {
-  height: 105px;
-  max-width: 100%;
+/* Nav Bar */
+
+.navbar,
+.footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #4a69bd;
+  font-family: "Redressed", cursive;
+  font-size: 16px;
 }
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li a:hover {
+  color: rgb(12, 117, 112);
+}
+
+/* Nav bar hamburger */
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Image 1 Content */
+
+h1.name {
+  font-family: "Redressed", cursive;
+  text-align: center;
+  color: white;
+  font-size: 5em;
+  line-height: 80px;
+}
+
+.cover_letter {
+  text-align: center;
+  color: white;
+  font-family: "Redressed", cursive;
+  font-size: 25px;
+}
+
+/* Skills */
+
+h2 {
+  font-family: "Redressed", cursive;
+  color: white;
+}
+
+ol.skills {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+/* projects */
 
 #project_header {
   padding: 50px 80px;
   text-align: center;
+  background-color: #4a69bd;
 }
+
 .slider-container {
   height: 70%;
   width: 100%;
   position: relative;
   overflow: hidden;
   text-align: center;
-  background-color: #4a69bd;
 }
 
 input {
@@ -206,4 +235,38 @@ input {
 .footer {
   background-color: #353b48;
   min-height: 20px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 480px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    /* display: none; */
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
 }
