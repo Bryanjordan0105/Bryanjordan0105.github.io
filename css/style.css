@@ -287,6 +287,10 @@ input {
     background-attachment: scroll;
   }
 
+  h1.name {
+    color: black;
+    text-shadow: 1px 1px black;
+  }
   /* Slideshow compatability */
   .slide-1 {
     background-image: url(/images/Apple.png);
