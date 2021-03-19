@@ -274,4 +274,15 @@ input {
   .navbar-links.active {
     display: flex;
   }
+
+  .pimg1,
+  .pimg2,
+  .pimg3,
+  .pimg4 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
 }
