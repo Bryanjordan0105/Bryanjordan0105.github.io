@@ -285,4 +285,29 @@ input {
     background-repeat: no-repeat;
     background-attachment: scroll;
   }
+  /* Slideshow compatability */
+  .slide-1 {
+    background-image: url(/images/Apple.png);
+    background-position: 50% 10%;
+  }
+  .slide-2 {
+    background-image: url(/images/Contacts.png);
+    background-position: 15% 10%;
+  }
+  .slide-3 {
+    background-image: url(/images/Olentables.png);
+    background-position: 50% 50%;
+  }
+  .slide-4 {
+    background-image: url(/images/ColorGenerator.png);
+    background-position: 50% 50%;
+  }
+  .slide-5 {
+    background-image: url(/images/Glowing\ Ring\ Loader.png);
+    background-position: 50% 50%;
+  }
+  .slide-6 {
+    background-image: url(/images/Analog\ Clock.png);
+    background-position: 50% 30%;
+  }
 }
